@@ -13,7 +13,7 @@ const About = () => {
     },
     {
       category: 'Backend',
-      items: ['Spring Boot', 'Laravel', 'Symfony', 'Code Igniter', 'Conception et consommation d\'API REST']
+      items: ['Spring Boot', 'Laravel', 'Symfony', 'Code Igniter', 'REST API design and consumption']
     },
     {
       category: 'Database',
