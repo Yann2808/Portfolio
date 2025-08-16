@@ -1,47 +1,60 @@
-import React from 'react';
 import { Calendar } from 'lucide-react';
 
 const experiences = [
   {
-    position: 'Business Analyst - Alternance',
-    company: 'AVRIL SERVICES',
-    location: '56920 Saint-Gérand-Croixanvec',
-    period: 'Septembre 2024 - Novembre 2024',
-    description: 'Working on various web development projects using modern technologies.',
-    technologies: ['SAP Business Object BI4', 'Power BI', 'Power Apps', 'SQL Server', 'Oracle Database'],
+    position: 'Web Developer - Internship',
+    company: 'SAS AS PHARM GROUP',
+    period: 'May 2025 - July 2025',
+    location: 'Paris, French',
+    description: 'Internship for my master degree\'s validation',
+    technologies: ['PHP', 'Laravel', 'VueJS', 'FilamentPHP', 'PostGreSQL', 'Git', 'Github', 'Laravel Cloud'],
     achievements: [
-      'Analyse et maintien des entrepôts de données pour garantir leur fiabilité',
-      'Conception et déploiement de tableaux de bord PowerBI en collaboration avec les équipes métier',
-      'Gestion en équipe du développement et de la validation de Proof Of Concept (PoC)',
-      'Priorisation et résolution des incidents techniques en support aux utilisateurs'
+      'Development and deployment of a web application in Laravel/Vue.js as part of a team',
+      'Business domain modeling with UML/Merise in a DDD approach',
+      'Integration and testing of a payment gateway under time constraints',
+      'Optimization of databases by refactoring SQL queries'
     ]
   },
   {
-    position: 'Développeur Web - Stage',
+    position: 'Business Analyst - Apprenticeship',
+    company: 'AVRIL SERVICES',
+    location: '56920 Saint-Gérand-Croixanvec, French',
+    period: 'September 2024 - November 2024',
+    description: 'Manage data warehouses, design PowerBI dashboards, make PoC.',
+    technologies: ['SAP Business Object BI4', 'Power BI', 'Power Apps', 'SQL Server', 'Oracle Database', 'DBeaver'],
+    achievements: [
+      'Analysis and maintenance of data warehouses to guarantee their reliability',
+      'Design and deployment of PowerBI dashboards in collaboration with business teams',
+      'Team management of Proof Of Concept (PoC) development and validation',
+      'Prioritization and resolution of technical incidents in support of users'
+    ]
+  },
+  {
+    position: 'Web Developer- Internship',
     company: 'Restaurant Chez Jean Bon',
-    location: '35000 Rennes',
-    period: 'Avril 2024 - Juin 2024',
-    description: 'Stage de validation de ma Licence 3 MIAGE',
+    location: '35000 Rennes, French',
+    period: 'April 2024 - June 2024',
+    description: 'Internship for Bachelor degree\'s validation',
     technologies: ['Java', 'Spring Boot', 'Spring Security', 'Angular', 'UML', 'MySQL', 'Git', 'Github'],
     achievements: [
-      'Développement du Backend en équipe avec Spring Boot',
-      'Gestion autonome de l’implémentation de l’authentification avec Spring Security',
-      'Adaptation rapide à Angular pour la refonte d’une interface',
-      'Identification et correction de bugs critiques'
+      'Backend development in a team with Spring Boot',
+      'Autonomous management of authentication implementation with Spring Security',
+      'Rapid adaptation to Angular for interface redesign',
+      'Identification and correction of critical bugs'
     ]
   },
   {
-    position: 'Développeur Web - CDD',
+    position: 'Web Developer - CDD',
     company: 'TEC SARL',
-    period: 'Septembre 2022 - Mai 2023',
-    location: 'Cotonou, Bénin',
-    description: 'Contrat à Durée Déterminée exécuté avant mon envol pour la France',
+    period: 'September 2022 - May 2023',
+    location: 'Cotonou, Benin',
+    description: 'Fixed-term contract executed before my departure for France',
     technologies: ['PHP', 'Laravel', 'VueJS', 'Docker', 'Cassandra', 'Git', 'Github'],
     achievements: [
-      'Développement et déploiement d\'une application web en Laravel/Vue.js en équipe',
-      'Modélisation des domaines métier avec UML/Merise dans une approche DDD',
-      'Intégration et test d’une passerelle de paiement sous contraintes de temps',
-      'Optimisation des bases de données en refactorisant les requêtes SQL'
+      'Development and deployment of a web application in Laravel/Vue.js as part of a team',
+      'Business domain modeling with UML/Merise in a DDD approach',
+      'Integration and testing of a payment gateway under time constraints',
+      'Optimization of databases by refactoring SQL queries'
     ]
   }
 ];

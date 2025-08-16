@@ -1,5 +1,4 @@
-import React from 'react';
-import { ArrowRight, Code2, Database, Server } from 'lucide-react';
+import { ArrowRight, Code2, Database, Server, Smartphone, ServerCog, Cloud} from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -52,12 +51,41 @@ const Hero = () => {
             </div>
 
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+              <div className="flex items-center justify-center w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-lg mb-4 mx-auto animate-float animate-delay-400">
+                <Smartphone className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 dark:text-white">Mobile</h3>
+              <p className="text-gray-600 dark:text-gray-300">Kotlin, XML, Gradle, Swift, Swift UI</p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
               <div className="flex items-center justify-center w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg mb-4 mx-auto animate-float animate-delay-400">
                 <Database className="w-6 h-6 text-purple-600 dark:text-purple-400" />
               </div>
               <h3 className="text-lg font-semibold mb-2 dark:text-white">Databases</h3>
               <p className="text-gray-600 dark:text-gray-300">MySQL, MariaDB, PostgreSQL, MongoDB, Neo4j</p>
             </div>
+
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+              <div className="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg mb-4 mx-auto animate-float animate-delay-400">
+                <ServerCog className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 dark:text-white">DevOps</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                CI/CD (GitHub Actions, GitLab CI, Jenkins), Docker, Kubernetes, Terraform, Helm
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+              <div className="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg mb-4 mx-auto animate-float animate-delay-400">
+                <Cloud className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 dark:text-white">Cloud</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Amazon Web Service (AWS), Google Cloud Platform (GCP), Microsoft Azure
+              </p>
+            </div>
+
           </div>
         </div>
       </div>

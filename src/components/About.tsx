@@ -1,4 +1,3 @@
-import React from 'react';
 import { Download, CheckCircle } from 'lucide-react';
 
 const About = () => {
@@ -14,6 +13,10 @@ const About = () => {
     {
       category: 'Backend',
       items: ['Spring Boot', 'Laravel', 'Symfony', 'Code Igniter', 'REST API design and consumption']
+    },
+    {
+      category: 'Mobile',
+      items: ['Kotlin', 'XML', 'Progressive Web Application - PWA', 'Gradle', 'Swift (iOS)']
     },
     {
       category: 'Database',

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
@@ -16,18 +15,31 @@ const projects = [
     results: 'Increased conversion rate by 25% and reduced cart abandonment by 30%.'
   },
   {
-    title: 'Task Management System',
+    title: 'Task Management System - MyMBOWARE (based on Peter Drucker System)',
     image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1000',
     description: 'A collaborative task management system with real-time updates and team analytics.',
     responsibilities: 'Designed the system architecture and implemented the real-time collaboration features.',
-    technologies: ['Vue.js', 'Express', 'MongoDB', 'Socket.io', 'Docker'],
+    technologies: ['Laravel', 'Blade', 'MySQL', 'Eloquent ORM', 'UML'],
     challenges: 'Building a scalable real-time system while maintaining data consistency across multiple users.',
     links: {
-      github: 'https://github.com',
-      live: 'https://example.com'
+      github: 'https://github.com/Yann2808/MyMBOware',
+      live: ''
     },
     results: 'Adopted by 50+ teams, resulting in a 40% increase in project completion rates.'
-  }
+  },
+  {
+    title: 'CLI Text Editor',
+    image: '/src/assets/public/img/cli_editor.png',
+    description: 'A text editor developed in three versions, progressively integrating the Command and Memento design patterns to handle actions, recording, and unlimited undo/redo functionality. \n The project showcases a clear and modular object-oriented architecture.',
+    responsibilities: 'Led the development of the frontend architecture and implemented the checkout process.',
+    technologies: ['Java', 'JUnit', 'Git', 'POO', 'Design patterns (Command, Memento, etc...)', 'single-layer architecture'],
+    challenges: 'The main challenges were to structure the code cleanly around design patterns while ensuring consistent handling of actions, their history, and the undo/redo system without overly complicating the architecture.',
+    links: {
+      github: 'https://github.com/Yann2808/Editor2020',
+      live: ''
+    },
+    results: 'The implementation successfully demonstrates a functional text editor with progressive features: basic command execution, action recording and replay, and unlimited undo/redo, all validated through comprehensive tests confirming stability and correctness.'
+  },
 ];
 
 const Projects = () => {
