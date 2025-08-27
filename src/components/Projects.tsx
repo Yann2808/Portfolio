@@ -3,7 +3,7 @@ import { ExternalLink, Github } from 'lucide-react';
 const projects = [
   {
     "title": "Employee Management System - AS PHARM GROUP",
-    "image": "https://images.unsplash.com/photo-1596525624773-f32a74c0c55f?auto=format&fit=crop&q=80&w=1000",
+    "image": "/img/employee_management_dashboard.jpeg",
     "description": "Design and development of a full-featured Human Resources (HR) management tool for AS PHARM, a SaaS company for pharmacies in Francophone Africa. The project aimed to centralize and automate employee management, leave, absences, and modification history to improve operational efficiency.",
     "responsibilities": "Led the full-stack development of the application and acted as project manager, handling task planning, progress tracking, and communication with stakeholders using an Agile-inspired methodology.",
     "technologies": [
@@ -49,7 +49,7 @@ const projects = [
   },
   {
     title: 'CLI Text Editor',
-    image: '/src/assets/public/img/cli_editor.png',
+    image: '/img/cli_editor.png',
     description: 'A text editor developed in three versions, progressively integrating the Command and Memento design patterns to handle actions, recording, and unlimited undo/redo functionality. \n The project showcases a clear and modular object-oriented architecture.',
     responsibilities: 'Led the development of the frontend architecture and implemented the checkout process.',
     technologies: ['Java', 'JUnit', 'Git', 'POO', 'Design patterns (Command, Memento, etc...)', 'single-layer architecture'],

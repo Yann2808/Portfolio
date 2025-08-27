@@ -47,7 +47,7 @@ const Hero = () => {
                 <Server className="w-6 h-6 text-green-600 dark:text-green-400" />
               </div>
               <h3 className="text-lg font-semibold mb-2 dark:text-white">Backend</h3>
-              <p className="text-gray-600 dark:text-gray-300">Java (Spring Boot), C++, PHP (Laravel, Symfony), Python</p>
+              <p className="text-gray-600 dark:text-gray-300">Java (Spring Boot), C++, PHP (Laravel, Symfony, CodeIgniter), Python (FastAPI)</p>
             </div>
 
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
@@ -63,7 +63,7 @@ const Hero = () => {
                 <Database className="w-6 h-6 text-purple-600 dark:text-purple-400" />
               </div>
               <h3 className="text-lg font-semibold mb-2 dark:text-white">Databases</h3>
-              <p className="text-gray-600 dark:text-gray-300">MySQL, MariaDB, PostgreSQL, MongoDB, Neo4j</p>
+              <p className="text-gray-600 dark:text-gray-300">MySQL, MariaDB, PostgreSQL, SQLite, MongoDB, Neo4j</p>
             </div>
 
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
