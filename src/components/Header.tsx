@@ -22,7 +22,7 @@ const Header = () => {
             
             <div className="flex items-center space-x-4">
               <ThemeToggle />
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Yann2808" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" />
               </a>
               <a href="https://www.linkedin.com/in/yann-salako/" target="_blank" rel="noopener noreferrer">

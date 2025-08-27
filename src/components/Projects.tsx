@@ -2,6 +2,26 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
+    "title": "Employee Management System - AS PHARM GROUP",
+    "image": "https://images.unsplash.com/photo-1596525624773-f32a74c0c55f?auto=format&fit=crop&q=80&w=1000",
+    "description": "Design and development of a full-featured Human Resources (HR) management tool for AS PHARM, a SaaS company for pharmacies in Francophone Africa. The project aimed to centralize and automate employee management, leave, absences, and modification history to improve operational efficiency.",
+    "responsibilities": "Led the full-stack development of the application and acted as project manager, handling task planning, progress tracking, and communication with stakeholders using an Agile-inspired methodology.",
+    "technologies": [
+      "Laravel 11",
+      "Filament PHP",
+      "Livewire",
+      "PostgreSQL",
+      "Spatie Laravel Permission",
+      "UML"
+    ],
+    "challenges": "Overcoming a significant technical challenge related to Livewire's re-rendering logic and the organization chart widget, which required a major code refactoring and a deep understanding of the framework's lifecycle.",
+    "links": {
+      "github": "https://github.com/Yann2808/employees_management",
+      "live": "https://example.com"
+    },
+    "results": "The final tool significantly contributes to AS PHARM’s operational efficiency by centralizing scattered HR processes and positions the company for future growth."
+  },
+  {
     title: 'E-commerce Platform',
     image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1000',
     description: 'A full-featured e-commerce platform with real-time inventory management and analytics dashboard.',

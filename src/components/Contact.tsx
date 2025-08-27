@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send, Linkedin } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -30,9 +30,17 @@ const Contact = () => {
             <h3 className="text-xl font-semibold mb-6 dark:text-white">Contact Information</h3>
             
             <div className="space-y-4 mb-8">
+
+            <div className="flex items-center transform transition-transform duration-300 hover:translate-x-2">
+                <Linkedin className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-3" />
+                <a href="https://www.linkedin.com/in/yann-salako/" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">
+                  Yann SALAKO
+                </a>
+              </div>
+
               <div className="flex items-center transform transition-transform duration-300 hover:translate-x-2">
                 <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-3" />
-                <a href="mailto:yannsalako27@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">
+                <a href="mailto:yannsalako27@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300" target='_blank'>
                   yannsalako27@gmail.com
                 </a>
               </div>
