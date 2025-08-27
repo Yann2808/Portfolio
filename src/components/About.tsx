@@ -59,7 +59,7 @@ const About = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300">
-            <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Mon profil</h3>
+            <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Profile</h3>
             <p>
               As a back-end-oriented software developer, I design robust, scalable solutions tailored to business needs.
               With experience of distributed architectures and a wide range of technologies, I work mainly on the back-end side, 
