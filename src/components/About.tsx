@@ -96,7 +96,7 @@ const About = () => {
 
             <div className="mt-8">
               <a
-                href="/cv.pdf"
+                href="public/pdf/CV_Yann_SALAKO.pdf"
                 className="inline-flex items-center px-6 py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors shadow"
               >
                 <Download className="w-5 h-5 mr-2" />
