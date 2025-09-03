@@ -96,8 +96,10 @@ const About = () => {
 
             <div className="mt-8">
               <a
-                href="public/pdf/CV_Yann_SALAKO.pdf"
+                href="/pdf/CV_Yann_SALAKO.pdf"
+                download="CV_Yann_SALAKO.pdf"
                 className="inline-flex items-center px-6 py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors shadow"
+                aria-label="Télécharger le CV de Yann Salako au format PDF"
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download my CV
