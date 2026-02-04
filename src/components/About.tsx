@@ -1,27 +1,37 @@
-import { Download, Terminal, Cpu, Database, Layout } from 'lucide-react';
+import { Download, Terminal, Cpu, Database, Layout, Server, Cloud, Code2 } from 'lucide-react';
 
 const About = () => {
-  const skills: { category: string; icon: any; items: string[] }[] = [
+  const skills = [
     {
       category: 'Data Engineering',
+      icon: Code2,
+      items: ['Python (Pandas)', 'SQL', 'Talend', 'Prefect', 'Snowflake', 'ETL/ELT']
+    },
+    {
+      category: 'Big Data Ecosystem',
       icon: Database,
-      items: ['Databricks', 'Spark (PySpark)', 'Snowflake', 'Talend', 'Delta Lake', 'SQL']
+      items: ['Spark (RDD/DataFrames)', 'Hadoop', 'Hive', 'HDFS', 'Distributed Arch.']
     },
     {
-      category: 'Software & Infra',
+      category: 'Databases',
+      icon: Server,
+      items: ['PostgreSQL', 'MySQL', 'SQL Server', 'Data Modeling']
+    },
+    {
+      category: 'DevOps & Deployment',
       icon: Terminal,
-      items: ['Python', 'Docker', 'Git', 'Prefect', 'CI/CD', 'Bash', 'Terraform']
+      items: ['Git', 'Docker', 'CI/CD', 'Bash']
     },
     {
-      category: 'Modeling & BI',
+      category: 'Visualization & BI',
       icon: Layout,
-      items: ['Star Schema', 'Medallion Architecture', 'Power BI', 'Metabase', 'Data Modeling', 'SAP BO']
+      items: ['Power BI', 'Tableau', 'Metabase', 'Reporting']
     },
     {
-      category: 'Core',
+      category: 'Methods & Languages',
       icon: Cpu,
-      items: ['Algorithmics', 'System Design', 'Agile/Scrum', 'English (Professional)']
-    },
+      items: ['Agile/Scrum', 'English (B1)', 'French (Native)']
+    }
   ];
 
   return (
