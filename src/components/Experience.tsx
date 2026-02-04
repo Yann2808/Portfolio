@@ -4,7 +4,7 @@ const experiences = [
   {
     position: 'Data Developer Intern',
     company: 'AS PHARM GROUP',
-    period: 'May 2025 - July 2025',
+    period: 'April 2025 - July 2025',
     location: 'Paris, France',
     description: 'Developing data-driven solutions for HR management in a SaaS environment.',
     technologies: ['PostgreSQL', 'SQL', 'Laravel', 'Real-time Dashboards', 'Data Modeling'],
@@ -19,7 +19,7 @@ const experiences = [
     position: 'BI & Data Engineering Intern',
     company: 'AVRIL SERVICES',
     location: 'Saint-Gérand-Croixanvec, France',
-    period: 'September 2024 - November 2024',
+    period: 'April 2024 - July 2024',
     description: 'Ensuring high availability of data warehouses and deploying Business Intelligence solutions.',
     technologies: ['SAP BO', 'Power BI', 'SQL Server', 'Oracle Database', 'Data Warehousing'],
     achievements: [
