@@ -25,7 +25,7 @@ const About = () => {
     {
       category: 'Visualization & BI',
       icon: Layout,
-      items: ['Power BI', 'Tableau', 'Metabase', 'Reporting']
+      items: ['Power BI', 'Tableau', 'Metabase', 'Reporting (SAP BO)']
     },
     {
       category: 'Methods & Languages',
