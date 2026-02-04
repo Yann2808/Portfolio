@@ -2,94 +2,100 @@ import { ArrowRight, Code2, Database, Server, Smartphone, ServerCog, Cloud } fro
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 pt-16">
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+      {/* Background Gradients */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] -z-10 animate-float" />
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-teal-500/10 rounded-full blur-[100px] -z-10" />
+
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 animate-slide-up">
-            Yann Salako
-            <span className="block text-3xl md:text-4xl text-gray-600 dark:text-gray-300 mt-2 animate-slide-up animate-delay-200">
+        <div className="text-center max-w-4xl mx-auto">
+          <div className="inline-block mb-6 animate-fade-in">
+            <span className="px-4 py-2 rounded-full border border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-300 text-sm font-medium flex items-center gap-2 mx-auto w-fit">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+              </span>
+              Seeking 6-month Data Engineering Internship • March 2026
+            </span>
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 animate-slide-up tracking-tight">
+            <span className="block text-slate-900 dark:text-white">Yann Salako</span>
+            <span className="block text-4xl md:text-5xl mt-2 text-gradient font-extrabold">
               Data Engineer with a Developer’s DNA
             </span>
           </h1>
 
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in animate-delay-300">
-            Building robust, scalable data pipelines with the precision of a Software Engineer.
+          <p className="text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in animate-delay-200">
+            Crafting robust, scalable <strong>ETL pipelines</strong> & <strong>Data Architectures</strong> with the precision and best practices of a Software Engineer.
           </p>
 
-          <div className="flex flex-col gap-2 mb-8 animate-fade-in animate-delay-300">
-            <span className="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium mx-auto">
-              📍 Based in Rennes, France
-            </span>
-            <span className="inline-block px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium mx-auto">
-              🚀 Seeking a 6-month Data Engineering internship starting March 2026
-            </span>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in animate-delay-400">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20 animate-fade-in animate-delay-300">
             <a
               href="#projects"
-              className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 hover:scale-105 flex items-center gap-2"
+              className="px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl font-medium hover:translate-y-[-2px] hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 flex items-center gap-2"
             >
-              View My Projects
+              Explore Projects
               <ArrowRight className="w-5 h-5" />
             </a>
             <a
               href="#contact"
-              className="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 hover:scale-105"
+              className="px-8 py-4 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 rounded-xl font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300"
             >
-              Contact Me
+              Let's Talk
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fade-in animate-delay-500">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
-              <div className="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg mb-4 mx-auto animate-float">
-                <Database className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2 dark:text-white">Data Engineering</h3>
-              <p className="text-gray-600 dark:text-gray-300">Databricks, Spark (PySpark), Snowflake, Delta Lake, SQL</p>
-            </div>
+          <div className="relative w-full max-w-5xl mx-auto overflow-hidden animate-fade-in animate-delay-400">
+            <div className="flex absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-white dark:from-slate-950 to-transparent"></div>
+            <div className="flex absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-white dark:from-slate-950 to-transparent"></div>
 
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
-              <div className="flex items-center justify-center w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg mb-4 mx-auto animate-float animate-delay-200">
-                <ServerCog className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+            <div className="flex w-[200%] animate-scroll hover:animation-play-state-paused">
+              {/* First Set */}
+              <div className="flex justify-around items-center w-1/2 gap-8 md:gap-16 px-8">
+                {[
+                  { name: "Spark", icon: Code2, color: "text-orange-500" },
+                  { name: "Databricks", icon: Database, color: "text-red-500" },
+                  { name: "Snowflake", icon: Cloud, color: "text-blue-400" },
+                  { name: "Talend", icon: ServerCog, color: "text-pink-500" },
+                  { name: "Python", icon: Code2, color: "text-yellow-500" },
+                  { name: "AWS", icon: Cloud, color: "text-orange-400" },
+                  { name: "Docker", icon: Server, color: "text-blue-500" },
+                  { name: "PostgreSQL", icon: Database, color: "text-blue-300" },
+                  { name: "Power BI", icon: Smartphone, color: "text-yellow-600" },
+                  { name: "Java", icon: Code2, color: "text-red-400" },
+                ].map((skill, index) => (
+                  <div key={index} className="flex flex-col items-center gap-2 group min-w-[100px]">
+                    <div className={`p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 group-hover:border-indigo-500/30 transition-colors shadow-sm`}>
+                      <skill.icon className={`w-8 h-8 ${skill.color}`} />
+                    </div>
+                    <span className="text-sm font-medium text-slate-600 dark:text-slate-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{skill.name}</span>
+                  </div>
+                ))}
               </div>
-              <h3 className="text-lg font-semibold mb-2 dark:text-white">ETL & Orchestration</h3>
-              <p className="text-gray-600 dark:text-gray-300">Talend, Prefect, Python, Pandas, Airflow</p>
-            </div>
-
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
-              <div className="flex items-center justify-center w-12 h-12 bg-Cloud-100 dark:bg-orange-900 rounded-lg mb-4 mx-auto animate-float animate-delay-400">
-                <Cloud className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+              {/* Duplicate Set for Infinite Scroll */}
+              <div className="flex justify-around items-center w-1/2 gap-8 md:gap-16 px-8">
+                {[
+                  { name: "Spark", icon: Code2, color: "text-orange-500" },
+                  { name: "Databricks", icon: Database, color: "text-red-500" },
+                  { name: "Snowflake", icon: Cloud, color: "text-blue-400" },
+                  { name: "Talend", icon: ServerCog, color: "text-pink-500" },
+                  { name: "Python", icon: Code2, color: "text-yellow-500" },
+                  { name: "AWS", icon: Cloud, color: "text-orange-400" },
+                  { name: "Docker", icon: Server, color: "text-blue-500" },
+                  { name: "PostgreSQL", icon: Database, color: "text-blue-300" },
+                  { name: "Power BI", icon: Smartphone, color: "text-yellow-600" },
+                  { name: "Java", icon: Code2, color: "text-red-400" },
+                ].map((skill, index) => (
+                  <div key={`dup-${index}`} className="flex flex-col items-center gap-2 group min-w-[100px]">
+                    <div className={`p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 group-hover:border-indigo-500/30 transition-colors shadow-sm`}>
+                      <skill.icon className={`w-8 h-8 ${skill.color}`} />
+                    </div>
+                    <span className="text-sm font-medium text-slate-600 dark:text-slate-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{skill.name}</span>
+                  </div>
+                ))}
               </div>
-              <h3 className="text-lg font-semibold mb-2 dark:text-white">Cloud & Infra</h3>
-              <p className="text-gray-600 dark:text-gray-300">AWS, Azure, Docker, Kubernetes, Terraform</p>
             </div>
-
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
-              <div className="flex items-center justify-center w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg mb-4 mx-auto animate-float animate-delay-200">
-                <Code2 className="w-6 h-6 text-green-600 dark:text-green-400" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2 dark:text-white">Software Engineering</h3>
-              <p className="text-gray-600 dark:text-gray-300">Python, Java, Git, CI/CD, APIs, Agile</p>
-            </div>
-
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
-              <div className="flex items-center justify-center w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-lg mb-4 mx-auto animate-float animate-delay-400">
-                <Smartphone className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2 dark:text-white">BI & Visualization</h3>
-              <p className="text-gray-600 dark:text-gray-300">Power BI, Tableau, Metabase, Star Schema</p>
-            </div>
-
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
-              <div className="flex items-center justify-center w-12 h-12 bg-teal-100 dark:bg-teal-900 rounded-lg mb-4 mx-auto animate-float animate-delay-400">
-                <Server className="w-6 h-6 text-teal-600 dark:text-teal-400" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2 dark:text-white">Database Management</h3>
-              <p className="text-gray-600 dark:text-gray-300">PostgreSQL, MongoDB, Neo4j, Modeling (Merise/UML)</p>
-            </div>
-
           </div>
         </div>
       </div>

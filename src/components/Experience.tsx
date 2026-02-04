@@ -1,4 +1,4 @@
-import { Calendar } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 
 const experiences = [
   {
@@ -61,54 +61,66 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-gray-900">
+    <section id="experience" className="py-24 bg-white dark:bg-slate-950">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-16 dark:text-white">Professional Experience</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-900 dark:text-white">Professional Journey</h2>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto space-y-12">
           {experiences.map((exp, index) => (
-            <div
-              key={exp.company}
-              className={`relative pl-8 pb-12 ${index !== experiences.length - 1 ? 'border-l-2 border-gray-200 dark:border-gray-700' : ''
-                }`}
-            >
-              <div className="absolute left-[-8px] top-0 w-4 h-4 bg-blue-600 rounded-full" />
+            <div key={index} className="relative pl-8 md:pl-0">
+              {/* Timeline Line */}
+              <div className="hidden md:block absolute left-[50%] top-0 bottom-[-48px] w-px bg-slate-200 dark:bg-slate-800 -translate-x-1/2 last:bottom-0"></div>
 
-              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
-                <div className="flex flex-wrap items-center gap-4 mb-4">
-                  <h3 className="text-xl font-semibold dark:text-white">{exp.position}</h3>
-                  <span className="text-gray-600 dark:text-gray-400">@ {exp.company}</span>
-                  <span className="text-gray-600 dark:text-gray-400">{exp.location}</span>
+              <div className={`md:flex items-center justify-between gap-12 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
+
+                {/* Timeline Dot (Desktop) */}
+                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-indigo-600 rounded-full border-4 border-white dark:border-slate-950 z-10 transition-transform hover:scale-150 duration-300 shadow-md"></div>
+
+                {/* Date Side */}
+                <div className={`hidden md:block w-1/2 ${index % 2 === 0 ? 'text-right pr-12' : 'text-left pl-12'}`}>
+                  <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-slate-100 dark:bg-slate-900 rounded-full text-slate-600 dark:text-slate-400 font-medium text-sm">
+                    <Calendar className="w-4 h-4" />
+                    {exp.period}
+                  </span>
                 </div>
 
-                <div className="flex items-center text-gray-600 dark:text-gray-400 mb-4">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  {exp.period}
-                </div>
+                {/* Content Side */}
+                <div className="md:w-1/2 relative bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-lg hover:border-indigo-500/30 transition-all duration-300">
+                  {/* Mobile Date */}
+                  <div className="md:hidden flex items-center gap-2 text-sm text-slate-500 mb-4">
+                    <Calendar className="w-4 h-4" />
+                    {exp.period}
+                  </div>
 
-                <p className="text-gray-600 dark:text-gray-400 mb-4">{exp.description}</p>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">{exp.position}</h3>
+                  <h4 className="text-lg font-medium text-indigo-600 dark:text-indigo-400 mb-4">{exp.company}</h4>
 
-                <div className="mb-4">
-                  <h4 className="font-medium mb-2 dark:text-white">Technologies:</h4>
+                  <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm mb-6">
+                    <MapPin className="w-4 h-4" />
+                    {exp.location}
+                  </div>
+
+                  <p className="text-slate-600 dark:text-slate-300 mb-6">{exp.description}</p>
+
+                  <ul className="space-y-3 mb-6">
+                    {exp.achievements.map((achievement, i) => (
+                      <li key={i} className="flex items-start gap-3 text-slate-600 dark:text-slate-400 text-sm">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>
+                        {achievement}
+                      </li>
+                    ))}
+                  </ul>
+
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm"
+                        className="px-2.5 py-1 bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-md text-xs font-medium border border-slate-100 dark:border-slate-700"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
-                </div>
-
-                <div className="mb-4">
-                  <h4 className="font-medium mb-2 dark:text-white">Key Achievements:</h4>
-                  <ul className="list-disc list-inside space-y-1 text-gray-600 dark:text-gray-400">
-                    {exp.achievements.map((achievement) => (
-                      <li key={achievement}>{achievement}</li>
-                    ))}
-                  </ul>
                 </div>
               </div>
             </div>
