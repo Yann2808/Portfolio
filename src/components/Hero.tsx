@@ -1,4 +1,4 @@
-import { ArrowRight, Code2, Database, Server, Smartphone, ServerCog, Cloud} from 'lucide-react';
+import { ArrowRight, Code2, Database, Server, Smartphone, ServerCog, Cloud } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -8,24 +8,32 @@ const Hero = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 animate-slide-up">
             Yann Salako
             <span className="block text-3xl md:text-4xl text-gray-600 dark:text-gray-300 mt-2 animate-slide-up animate-delay-200">
-              Full Stack Developer
+              Data Engineer with a Developer’s DNA
             </span>
           </h1>
-          
+
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in animate-delay-300">
-            Passionate about web development and modern technologies.
-            Specialized in creating modern and performant web applications.
+            Building robust, scalable data pipelines with the precision of a Software Engineer.
           </p>
 
+          <div className="flex flex-col gap-2 mb-8 animate-fade-in animate-delay-300">
+            <span className="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium mx-auto">
+              📍 Based in Rennes, France
+            </span>
+            <span className="inline-block px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium mx-auto">
+              🚀 Seeking a 6-month Data Engineering internship starting March 2026
+            </span>
+          </div>
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in animate-delay-400">
-            <a 
+            <a
               href="#projects"
               className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 hover:scale-105 flex items-center gap-2"
             >
               View My Projects
               <ArrowRight className="w-5 h-5" />
             </a>
-            <a 
+            <a
               href="#contact"
               className="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 hover:scale-105"
             >
