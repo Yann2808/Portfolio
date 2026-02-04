@@ -5,12 +5,12 @@ const About = () => {
     {
       category: 'Data Engineering',
       icon: Code2,
-      items: ['Python (Pandas)', 'SQL', 'Talend', 'Prefect', 'Snowflake', 'ETL/ELT']
+      items: ['Python (Pandas)', 'SQL', 'Talend', 'Prefect', 'Snowflake', 'ETL/ELT', 'Databricks']
     },
     {
-      category: 'Big Data Ecosystem',
+      category: 'Big Data & Cloud Ecosystem',
       icon: Database,
-      items: ['Spark (RDD/DataFrames)', 'Hadoop', 'Hive', 'HDFS', 'Distributed Arch.']
+      items: ['Spark (RDD/DataFrames)', 'Hadoop', 'Hive', 'HDFS', 'Distributed Arch.', 'AWS']
     },
     {
       category: 'Databases',
@@ -30,7 +30,7 @@ const About = () => {
     {
       category: 'Methods & Languages',
       icon: Cpu,
-      items: ['Agile/Scrum', 'English (B1)', 'French (Native)']
+      items: ['Agile/Scrum', 'English (B2)', 'French (Native)']
     }
   ];
 
