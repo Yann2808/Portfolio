@@ -8,6 +8,8 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+import LearningPath from './components/LearningPath';
+
 function App() {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
@@ -16,6 +18,7 @@ function App() {
         <main>
           <Hero />
           <About />
+          <LearningPath />
           <Projects />
           <Experience />
           <Contact />
