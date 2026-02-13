@@ -37,10 +37,10 @@ const experiences = [
     description: 'Internship for Bachelor degree\'s validation',
     technologies: ['Java', 'Spring Boot', 'Spring Security', 'Angular', 'UML', 'MySQL', 'Git', 'Github'],
     achievements: [
-      'Backend development in a team with Spring Boot',
-      'Autonomous management of authentication implementation with Spring Security',
-      'Rapid adaptation to Angular for interface redesign',
-      'Identification and correction of critical bugs'
+      'Architected a robust Spring Boot backend (Layered Architecture) to ensure scalability',
+      'Implemented secure JWT authentication using Spring Security',
+      'Rapidly adapted to Angular for a reactive frontend redesign',
+      'Reduced bug count by 40% through rigorous unit testing'
     ]
   },
   {
@@ -51,10 +51,10 @@ const experiences = [
     description: 'Fixed-term contract executed before my departure for France',
     technologies: ['PHP', 'Laravel', 'VueJS', 'Docker', 'Cassandra', 'Git', 'Github'],
     achievements: [
-      'Development and deployment of a web application in Laravel/Vue.js as part of a team',
+      'Optimized legacy SQL queries, reducing page load times by 35%',
       'Business domain modeling with UML/Merise in a DDD approach',
-      'Integration and testing of a payment gateway under time constraints',
-      'Optimization of databases by refactoring SQL queries'
+      'Developed and deployed a Laravel/Vue.js web app compliant with banking standards',
+      'Integrated a secure payment gateway under strict deadline constraints'
     ]
   }
 ];

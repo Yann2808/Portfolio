@@ -1,41 +1,26 @@
-import { Download, Terminal, Cpu, Database, Layout, Server, Cloud, Code2 } from 'lucide-react';
+import { Download, Cpu, Database, Cloud, Code2 } from 'lucide-react';
 
 const About = () => {
   const skills = [
     {
-      category: 'Data Engineering',
-      icon: Code2,
-      items: ['Python (Pandas)', 'SQL', 'Talend', 'Prefect', 'Snowflake', 'ETL/ELT', 'Databricks']
-    },
-    {
-      category: 'Big Data & Cloud Ecosystem',
+      category: 'Data Core & Analytics',
       icon: Database,
-      items: ['Spark (RDD/DataFrames)', 'Hadoop', 'Hive', 'HDFS', 'Distributed Arch.', 'AWS (Cloud Essentials)', 'DynamoDB']
+      items: [
+        'Spark (PySpark)', 'Databricks', 'Snowflake',
+        'ETL/ELT Pipelines', 'Airflow/Prefect',
+        'Big Data (Hadoop/Hive)', 'Advanced SQL (Postgres/MySQL)',
+        'Data Modeling (Star Schema)', 'Power BI / Tableau'
+      ]
     },
     {
-      category: 'Databases (SQL & NoSQL)',
-      icon: Server,
-      items: ['PostgreSQL', 'MySQL', 'SQL Server', 'DynamoDB (NoSQL)', 'Data Modeling']
+      category: 'Software Engineering',
+      icon: Code2,
+      items: ['Java (Spring Boot)', 'Python', 'PHP (Laravel)', 'JavaScript (Angular/Vue)', 'API Design']
     },
     {
-      category: 'DevOps & Deployment',
-      icon: Terminal,
-      items: ['Git', 'Docker', 'CI/CD', 'Bash']
-    },
-    {
-      category: 'Visualization & BI',
-      icon: Layout,
-      items: ['Power BI', 'Tableau', 'Metabase', 'Reporting (SAP BO)']
-    },
-    {
-      category: "Methodology & Soft Skills",
-      icon: Cpu, // Assuming Cpu icon for methodology
-      items: ["Agile/Scrum", "Data Quality", "Data Modeling (Star/Snowflake)", "CI/CD", "Architectural Veille", "Problem Solving"]
-    },
-    {
-      category: "Languages",
-      icon: Cpu, // Assuming Cpu icon for languages, or could be omitted if no specific icon
-      items: ["English (B2)", "French (Native)"]
+      category: 'Cloud & DevOps',
+      icon: Cloud,
+      items: ['AWS (Essentials)', 'Docker', 'CI/CD (GitHub Actions)', 'Git & Versioning', 'DynamoDB', 'Linux/Bash']
     }
   ];
 
@@ -60,9 +45,13 @@ const About = () => {
                 As a Data Engineer with a strong background in software development, I don't just write scripts; I design systems. My journey began in Full Stack Web Development, where I mastered the art of clean code, modular architecture, and user-centric design.
               </p>
 
-              <blockquote className="border-l-4 border-indigo-500 pl-6 italic text-slate-700 dark:text-slate-300 font-medium">
-                "What is meant for me recharges me; what is not consumes me."
-              </blockquote>
+              {/* Hybrid Advantage Card */}
+              <div className="p-6 bg-indigo-50 dark:bg-indigo-900/20 border-l-4 border-indigo-500 rounded-r-xl my-8">
+                <h4 className="text-lg font-bold text-indigo-700 dark:text-indigo-300 mb-2">The Hybrid Advantage</h4>
+                <p className="text-sm text-slate-700 dark:text-slate-300 italic">
+                  "I understand the full lifecycle of data — from its creation in the application layer (Backend/Frontend) to its transformation and analysis in the Data Lake. This allows me to build pipelines that are not only efficient but also resilient and aligned with application logic."
+                </p>
+              </div>
 
               <p>
                 Today, I leverage that "Developer DNA" to build robust, industrial-grade data pipelines. Whether it's optimizing a Big Data processing workflow on Databricks or orchestrating complex dependencies with Prefect, I bring a rigorous engineering mindset to the data world.
@@ -89,14 +78,14 @@ const About = () => {
               Technical Arsenal
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               {skills.map((group, idx) => (
-                <div key={idx} className="bg-slate-50 dark:bg-slate-900/50 rounded-xl p-5 border border-slate-100 dark:border-slate-800 hover:border-indigo-500/30 transition-colors h-full">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="p-1.5 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
-                      <group.icon className="w-4 h-4 text-indigo-500" />
+                <div key={idx} className="bg-slate-50 dark:bg-slate-900/50 rounded-xl p-6 border border-slate-100 dark:border-slate-800 hover:border-indigo-500/30 transition-colors">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
+                      <group.icon className="w-5 h-5 text-indigo-500" />
                     </div>
-                    <h4 className="font-semibold text-slate-900 dark:text-white text-sm">{group.category}</h4>
+                    <h4 className="font-semibold text-slate-900 dark:text-white">{group.category}</h4>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {group.items.map((skill) => (
