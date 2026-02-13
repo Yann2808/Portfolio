@@ -10,12 +10,12 @@ const About = () => {
     {
       category: 'Big Data & Cloud Ecosystem',
       icon: Database,
-      items: ['Spark (RDD/DataFrames)', 'Hadoop', 'Hive', 'HDFS', 'Distributed Arch.', 'AWS']
+      items: ['Spark (RDD/DataFrames)', 'Hadoop', 'Hive', 'HDFS', 'Distributed Arch.', 'AWS (Cloud Essentials)', 'DynamoDB']
     },
     {
-      category: 'Databases',
+      category: 'Databases (SQL & NoSQL)',
       icon: Server,
-      items: ['PostgreSQL', 'MySQL', 'SQL Server', 'Data Modeling']
+      items: ['PostgreSQL', 'MySQL', 'SQL Server', 'DynamoDB (NoSQL)', 'Data Modeling']
     },
     {
       category: 'DevOps & Deployment',
@@ -89,14 +89,14 @@ const About = () => {
               Technical Arsenal
             </h3>
 
-            <div className="grid gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {skills.map((group, idx) => (
-                <div key={idx} className="bg-slate-50 dark:bg-slate-900/50 rounded-xl p-6 border border-slate-100 dark:border-slate-800 hover:border-indigo-500/30 transition-colors">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
-                      <group.icon className="w-5 h-5 text-indigo-500" />
+                <div key={idx} className="bg-slate-50 dark:bg-slate-900/50 rounded-xl p-5 border border-slate-100 dark:border-slate-800 hover:border-indigo-500/30 transition-colors h-full">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="p-1.5 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
+                      <group.icon className="w-4 h-4 text-indigo-500" />
                     </div>
-                    <h4 className="font-semibold text-slate-900 dark:text-white">{group.category}</h4>
+                    <h4 className="font-semibold text-slate-900 dark:text-white text-sm">{group.category}</h4>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {group.items.map((skill) => (

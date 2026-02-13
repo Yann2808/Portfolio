@@ -27,7 +27,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in animate-delay-200">
-            Crafting robust, scalable <strong>ETL pipelines</strong> & <strong>Data Architectures</strong> with the precision and best practices of a Software Engineer.
+            Expert in <strong>Data Pipelines</strong> & <strong>Medallion Architectures</strong>. <br className="hidden md:block" />
+            Databricks Certified & trained in <strong>AWS Cloud & NoSQL</strong> environments.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20 animate-fade-in animate-delay-300">

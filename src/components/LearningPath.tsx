@@ -4,30 +4,30 @@ const LearningPath = () => {
     const certifications = [
         {
             title: "Databricks Certified Data Engineer Associate",
-            issuer: "Databricks",
-            date: "2026",
-            skills: ["Spark", "Delta Lake", "Data Modeling"],
-            link: "https://credentials.databricks.com/", // Placeholder
+            issuer: "Databricks Academy",
+            date: "Jan 17, 2026",
+            skills: ["Data Modeling Strategies", "Delta Lake", "Optimizations"],
+            link: "https://credentials.databricks.com/",
             type: "Certification",
             color: "bg-red-500"
         },
         {
-            title: "Advanced SQL for Data Engineers",
-            issuer: "Coursera / Udemy",
-            date: "2025",
-            skills: ["Window Functions", "CTE", "Performance Tuning"],
+            title: "AWS Certified Cloud Practitioner",
+            issuer: "AWS Training & Certification",
+            date: "Feb 09, 2026",
+            skills: ["Cloud Governance", "Security", "Global Infrastructure"],
             link: "",
-            type: "Course",
-            color: "bg-blue-500"
+            type: "Certification",
+            color: "bg-orange-500"
         },
         {
-            title: "Cloud Infrastructure on AWS",
-            issuer: "AWS / Coursera",
-            date: "2025",
-            skills: ["EC2", "S3", "Lambda", "IAM"],
+            title: "Introduction to Amazon DynamoDB",
+            issuer: "AWS Training & Certification",
+            date: "Feb 09, 2026",
+            skills: ["NoSQL Design", "Access Patterns", "Single Table Design"],
             link: "",
             type: "Course",
-            color: "bg-orange-500"
+            color: "bg-blue-600"
         }
     ];
 
@@ -39,8 +39,8 @@ const LearningPath = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16">
                     <div>
-                        <span className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-2 block">Continuous Growth</span>
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Learning Path</h2>
+                        <span className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-2 block">Continuous Learning</span>
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Cloud & Data Certifications</h2>
                     </div>
                 </div>
 

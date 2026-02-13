@@ -14,12 +14,12 @@ const projects = [
       "live": ""
     },
     "details": {
-      "problem": "With the rapid adoption of electric vehicles, charging infrastructure planning has become critical. The client struggled to process terabytes of charging session data efficiently, leading to delays in identifying high-demand areas and optimizing grid load.",
-      "solution": "Architected a scalable Big Data pipeline using Apache Spark and Databricks. Utilized Delta Lake for ACID transactions and time travel capabilities. Implemented advanced window functions to analyze peak usage hours and charging behaviors across different demographics.",
-      "impact": "Reduced data processing time by 60%, enabling daily reporting instead of weekly. Identified 15+ under-served locations for new charging stations, projected to increase revenue by 20% in the first year.",
+      "problem": "With the rapid adoption of electric vehicles, the client faced a data bottleneck. Processing terabytes of charging session data was taking 48+ hours, making it impossible to derive timely insights for infrastructure planning and grid load optimization.",
+      "solution": "Designed a Medallion Architecture (Bronze/Silver/Gold) on Databricks. The pipeline ingests raw JSON logs into Delta Lake. Silver tables clean and enforce schema, while Gold tables aggregate metrics for Power BI. Used Spark Structured Streaming for near real-time ingestion.",
+      "impact": "Reduced data processing time from 48h to 4 hours (90% reduction). Enabled daily reporting on peak usage. Identified 15+ under-served locations, projecting a 20% revenue increase.",
       "stack": [
         { name: "Databricks (Compute)" },
-        { name: "PySpark (ETL)" },
+        { name: "PySpark (Optimization)" },
         { name: "Delta Lake (Storage)" },
         { name: "Power BI (Viz)" }
       ]
@@ -36,13 +36,13 @@ const projects = [
       live: ''
     },
     details: {
-      problem: "E-commerce businesses often lack granular visibility into user journeys. The existing monolithic solution was brittle, hard to scale, and failed to provide real-time insights into cart abandonment and product performance.",
-      solution: "Built a microservices-based analytics platform containerized with Docker. Orchestrated ETL workflows using Prefect to ingest clickstream data. Stored processed data in a dimensional PostgreSQL schema optimized for read-heavy analytical queries.",
-      impact: "Achieved 99.9% pipeline uptime. Enabled real-time dashboards that helped reduce cart abandonment by 12% through targeted interventions triggered by the new data signals.",
+      problem: "The existing e-commerce analytics were based on a monolithic, brittle SQL script that failed frequently. The business lacked visibility into real-time user journeys and cart abandonment drivers.",
+      solution: "Built a microservices-based architecture containerized with Docker. Used Prefect to orchestrate complex dependencies (Extract -> Transform -> Load). Implemented a Star Schema in PostgreSQL to optimize analytical queries (OLAP) separate from the transactional DB (OLTP).",
+      impact: "Achieved 99.9% pipeline uptime and zero manual interventions. Reduced cart abandonment by 12% through targeted insights. Provided a reusable, modular infrastructure for future analytics needs.",
       stack: [
         { name: "Prefect (Orchestration)" },
         { name: "Docker (Containerization)" },
-        { name: "PostgreSQL (Warehouse)" },
+        { name: "PostgreSQL (Star Schema)" },
         { name: "Pandas (Transformation)" }
       ]
     }
@@ -107,8 +107,8 @@ const Projects = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div>
-            <span className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-2 block">Portfolio</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Featured Projects</h2>
+            <span className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm mb-2 block">Technical Deep-Dives</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Engineering Case Studies</h2>
           </div>
           <a href="https://github.com/Yann2808" target='_blank' className="hidden md:flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium">
             View all on GitHub <ArrowUpRight className="w-4 h-4" />
@@ -134,7 +134,7 @@ const Projects = () => {
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
                   <span className="px-6 py-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur text-slate-900 dark:text-white rounded-full font-semibold shadow-lg hover:scale-105 transition-transform flex items-center gap-2">
                     <BookOpen className="w-4 h-4" />
-                    Read Case Study
+                    View Technical Write-up
                   </span>
                 </div>
               </div>
