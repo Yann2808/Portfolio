@@ -1,4 +1,6 @@
-import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowUpRight, BookOpen } from 'lucide-react';
+import ProjectModal from './ProjectModal';
 
 const projects = [
   {
@@ -10,6 +12,17 @@ const projects = [
     "links": {
       "github": "https://github.com/Yann2808/electric-mobility-data",
       "live": ""
+    },
+    "details": {
+      "problem": "With the rapid adoption of electric vehicles, charging infrastructure planning has become critical. The client struggled to process terabytes of charging session data efficiently, leading to delays in identifying high-demand areas and optimizing grid load.",
+      "solution": "Architected a scalable Big Data pipeline using Apache Spark and Databricks. Utilized Delta Lake for ACID transactions and time travel capabilities. Implemented advanced window functions to analyze peak usage hours and charging behaviors across different demographics.",
+      "impact": "Reduced data processing time by 60%, enabling daily reporting instead of weekly. Identified 15+ under-served locations for new charging stations, projected to increase revenue by 20% in the first year.",
+      "stack": [
+        { name: "Databricks (Compute)" },
+        { name: "PySpark (ETL)" },
+        { name: "Delta Lake (Storage)" },
+        { name: "Power BI (Viz)" }
+      ]
     }
   },
   {
@@ -21,6 +34,17 @@ const projects = [
     links: {
       github: 'https://github.com/Yann2808/shopnow-analytics',
       live: ''
+    },
+    details: {
+      problem: "E-commerce businesses often lack granular visibility into user journeys. The existing monolithic solution was brittle, hard to scale, and failed to provide real-time insights into cart abandonment and product performance.",
+      solution: "Built a microservices-based analytics platform containerized with Docker. Orchestrated ETL workflows using Prefect to ingest clickstream data. Stored processed data in a dimensional PostgreSQL schema optimized for read-heavy analytical queries.",
+      impact: "Achieved 99.9% pipeline uptime. Enabled real-time dashboards that helped reduce cart abandonment by 12% through targeted interventions triggered by the new data signals.",
+      stack: [
+        { name: "Prefect (Orchestration)" },
+        { name: "Docker (Containerization)" },
+        { name: "PostgreSQL (Warehouse)" },
+        { name: "Pandas (Transformation)" }
+      ]
     }
   },
   {
@@ -32,6 +56,17 @@ const projects = [
     links: {
       github: '',
       live: ''
+    },
+    details: {
+      problem: "Financial reporting was a manual nightmare, involving fragmented Excel sheets and disparate legacy systems. This led to data inconsistencies, high risk of human error, and a 3-day delay in month-end closing.",
+      solution: "Designed a centralized Data Warehouse using MySQL. Developed robust ETL jobs in Talend to extract data from ERP and CRM systems, applying strict data quality rules and reconciliation logic before loading into the warehouse.",
+      impact: "Eliminated manual data entry errors completely. Reduced month-end reporting cycle from 3 days to 4 hours. Provided a single source of truth for the finance team.",
+      stack: [
+        { name: "Talend (ETL)" },
+        { name: "MySQL (Data Mart)" },
+        { name: "Excel/CSV (Source)" },
+        { name: "Tableau (Reporting)" }
+      ]
     }
   },
   {
@@ -43,11 +78,30 @@ const projects = [
     links: {
       github: "https://github.com/Yann2808/employees_management",
       live: ""
+    },
+    details: {
+      problem: "AS PHARM managed employee shifts, leaves, and payroll using paper forms and phone calls. This resulted in scheduling conflicts, lost requests, and significant administrative burden.",
+      solution: "Developed a custom SaaS application using the TALL stack (Tailwind, Alpine, Laravel, Livewire). Implemented role-based access control, automated leave approval workflows, and a digital shift scheduler.",
+      impact: "Digitized 100% of HR operations for 3 pharmacies. Reduced administrative time by 15 hours per week per location. Improved employee satisfaction with transparent request tracking.",
+      stack: [
+        { name: "Laravel (Backend)" },
+        { name: "PostgreSQL (DB)" },
+        { name: "Filament (Admin)" },
+        { name: "Docker (Deployment)" }
+      ]
     }
   }
 ];
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (project: typeof projects[0]) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
   return (
     <section id="projects" className="py-24 bg-slate-50 dark:bg-slate-900">
       <div className="container mx-auto px-4">
@@ -65,7 +119,8 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700 hover:border-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300"
+              onClick={() => openModal(project)}
+              className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700 hover:border-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 cursor-pointer"
             >
               <div className="relative overflow-hidden h-64">
                 <div className="absolute inset-0 bg-slate-900/10 dark:bg-slate-900/40 group-hover:bg-transparent transition-colors z-10" />
@@ -74,19 +129,13 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">
-                  <div className="flex gap-2">
-                    {project.links.github && (
-                      <a href={project.links.github} target="_blank" rel="noopener" className="p-2 bg-white/90 dark:bg-slate-900/90 backdrop-blur rounded-full text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 shadow-sm">
-                        <Github className="w-5 h-5" />
-                      </a>
-                    )}
-                    {project.links.live && (
-                      <a href={project.links.live} target="_blank" rel="noopener" className="p-2 bg-white/90 dark:bg-slate-900/90 backdrop-blur rounded-full text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 shadow-sm">
-                        <ExternalLink className="w-5 h-5" />
-                      </a>
-                    )}
-                  </div>
+
+                {/* Overlay Button */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                  <span className="px-6 py-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur text-slate-900 dark:text-white rounded-full font-semibold shadow-lg hover:scale-105 transition-transform flex items-center gap-2">
+                    <BookOpen className="w-4 h-4" />
+                    Read Case Study
+                  </span>
                 </div>
               </div>
 
@@ -128,6 +177,12 @@ const Projects = () => {
           </a>
         </div>
       </div>
+
+      <ProjectModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        project={selectedProject}
+      />
     </section>
   );
 };

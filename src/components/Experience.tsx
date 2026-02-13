@@ -85,41 +85,44 @@ const Experience = () => {
                 </div>
 
                 {/* Content Side */}
-                <div className="md:w-1/2 relative bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-lg hover:border-indigo-500/30 transition-all duration-300">
-                  {/* Mobile Date */}
-                  <div className="md:hidden flex items-center gap-2 text-sm text-slate-500 mb-4">
-                    <Calendar className="w-4 h-4" />
-                    {exp.period}
-                  </div>
+                <div className="md:w-1/2 relative bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-indigo-500/30 transition-all duration-300 group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent to-indigo-50/50 dark:to-indigo-900/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
+                  <div className="relative z-10">
+                    {/* Mobile Date */}
+                    <div className="md:hidden flex items-center gap-2 text-sm text-slate-500 mb-4">
+                      <Calendar className="w-4 h-4" />
+                      {exp.period}
+                    </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">{exp.position}</h3>
-                  <h4 className="text-lg font-medium text-indigo-600 dark:text-indigo-400 mb-4">{exp.company}</h4>
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">{exp.position}</h3>
+                    <h4 className="text-lg font-medium text-indigo-600 dark:text-indigo-400 mb-4">{exp.company}</h4>
 
-                  <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm mb-6">
-                    <MapPin className="w-4 h-4" />
-                    {exp.location}
-                  </div>
+                    <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm mb-6">
+                      <MapPin className="w-4 h-4" />
+                      {exp.location}
+                    </div>
 
-                  <p className="text-slate-600 dark:text-slate-300 mb-6">{exp.description}</p>
+                    <p className="text-slate-600 dark:text-slate-300 mb-6">{exp.description}</p>
 
-                  <ul className="space-y-3 mb-6">
-                    {exp.achievements.map((achievement, i) => (
-                      <li key={i} className="flex items-start gap-3 text-slate-600 dark:text-slate-400 text-sm">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>
-                        {achievement}
-                      </li>
-                    ))}
-                  </ul>
+                    <ul className="space-y-3 mb-6">
+                      {exp.achievements.map((achievement, i) => (
+                        <li key={i} className="flex items-start gap-3 text-slate-600 dark:text-slate-400 text-sm">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>
+                          {achievement}
+                        </li>
+                      ))}
+                    </ul>
 
-                  <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2.5 py-1 bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-md text-xs font-medium border border-slate-100 dark:border-slate-700"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                    <div className="flex flex-wrap gap-2">
+                      {exp.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2.5 py-1 bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-md text-xs font-medium border border-slate-100 dark:border-slate-700"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>

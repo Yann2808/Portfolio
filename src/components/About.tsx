@@ -28,9 +28,14 @@ const About = () => {
       items: ['Power BI', 'Tableau', 'Metabase', 'Reporting (SAP BO)']
     },
     {
-      category: 'Methods & Languages',
-      icon: Cpu,
-      items: ['Agile/Scrum', 'English (B2)', 'French (Native)']
+      category: "Methodology & Soft Skills",
+      icon: Cpu, // Assuming Cpu icon for methodology
+      items: ["Agile/Scrum", "Data Quality", "Data Modeling (Star/Snowflake)", "CI/CD", "Architectural Veille", "Problem Solving"]
+    },
+    {
+      category: "Languages",
+      icon: Cpu, // Assuming Cpu icon for languages, or could be omitted if no specific icon
+      items: ["English (B2)", "French (Native)"]
     }
   ];
 
