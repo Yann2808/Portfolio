@@ -51,9 +51,9 @@ const Hero = () => {
             <div className="flex absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-white dark:from-slate-950 to-transparent"></div>
             <div className="flex absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-white dark:from-slate-950 to-transparent"></div>
 
-            <div className="flex w-[200%] animate-scroll hover:animation-play-state-paused">
+            <div className="flex w-max animate-scroll hover:animation-play-state-paused">
               {/* First Set */}
-              <div className="flex justify-around items-center w-1/2 gap-8 md:gap-16 px-8">
+              <div className="flex items-center gap-8 md:gap-16 px-4 pr-8 md:pr-16 shrink-0">
                 {[
                   { name: "Spark", icon: Code2, color: "text-orange-500" },
                   { name: "Databricks", icon: Database, color: "text-red-500" },
@@ -73,7 +73,7 @@ const Hero = () => {
                   { name: "Git", icon: Code2, color: "text-red-500" },
                   { name: "Java", icon: Code2, color: "text-red-400" },
                 ].map((skill, index) => (
-                  <div key={index} className="flex flex-col items-center gap-2 group min-w-[100px]">
+                  <div key={index} className="flex flex-col items-center gap-2 group min-w-[80px]">
                     <div className={`p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 group-hover:border-indigo-500/30 transition-colors shadow-sm`}>
                       <skill.icon className={`w-8 h-8 ${skill.color}`} />
                     </div>
@@ -82,7 +82,7 @@ const Hero = () => {
                 ))}
               </div>
               {/* Duplicate Set for Infinite Scroll */}
-              <div className="flex justify-around items-center w-1/2 gap-8 md:gap-16 px-8">
+              <div className="flex items-center gap-8 md:gap-16 px-4 pr-8 md:pr-16 shrink-0">
                 {[
                   { name: "Spark", icon: Code2, color: "text-orange-500" },
                   { name: "Databricks", icon: Database, color: "text-red-500" },
@@ -102,7 +102,7 @@ const Hero = () => {
                   { name: "Git", icon: Code2, color: "text-red-500" },
                   { name: "Java", icon: Code2, color: "text-red-400" },
                 ].map((skill, index) => (
-                  <div key={`dup-${index}`} className="flex flex-col items-center gap-2 group min-w-[100px]">
+                  <div key={`dup-${index}`} className="flex flex-col items-center gap-2 group min-w-[80px]">
                     <div className={`p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 group-hover:border-indigo-500/30 transition-colors shadow-sm`}>
                       <skill.icon className={`w-8 h-8 ${skill.color}`} />
                     </div>

@@ -4,6 +4,28 @@ import ProjectModal from './ProjectModal';
 
 const projects = [
   {
+    title: "Modern Data Stack: dbt & Databricks",
+    image: 'file:///c:/Users/SALAKO/.gemini/antigravity/brain/c9da3936-0d32-4204-a102-2cb6b98e82ad/media__1771178525635.png',
+    description: "End-to-end data transformation pipeline implementing a layered architecture (Medallion) for high-quality customer analytics.",
+    technologies: ["dbt", "Databricks", "SQL (Jinja)", "GitHub Actions"],
+    stats: "100% Data Quality",
+    links: {
+      github: "https://github.com/Yann2808/dbt-databricks-pipeline", // Placeholder
+      live: ""
+    },
+    details: {
+      problem: "The 'Jaffle Shop' e-commerce platform lacked a single source of truth for customer analytics. Raw data was siloed and unvalidated, making it impossible to calculate key metrics like Lifetime Value (LTV) accurately.",
+      solution: "Constructed a modular dbt pipeline on Databricks with a Staging/Intermediate/Marts architecture. Used Jinja for complex joins and dbt_utils for custom schema tests. Implemented CI/CD for automated testing.",
+      impact: "Delivered a production-ready 'dim_customers' table with 0% data discrepancies. Validated LTV positivity and uniqueness across 100% of records via automated testing suites.",
+      stack: [
+        { name: "dbt Cloud (Transformation)" },
+        { name: "Databricks (Compute)" },
+        { name: "SQL & Jinja (Logic)" },
+        { name: "GitHub Actions (CI/CD)" }
+      ]
+    }
+  },
+  {
     "title": "Electric Mobility Big Data Analysis",
     image: '/img/electric_mobility.png',
     "description": "Processed and analyzed massive datasets related to electric vehicle usage. The goal was to derive insights on charging patterns and optimize infrastructure planning.",
