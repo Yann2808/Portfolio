@@ -6,7 +6,7 @@ const About = () => {
       category: 'Data Core & Analytics',
       icon: Database,
       items: [
-        'Spark (PySpark)', 'Databricks', 'Snowflake',
+        'Spark (PySpark)', 'Databricks', 'Snowflake', 'dbt',
         'ETL/ELT Pipelines', 'Airflow/Prefect',
         'Big Data (Hadoop/Hive)', 'Advanced SQL (Postgres/MySQL)',
         'Data Modeling (Star Schema)', 'Power BI / Tableau'
